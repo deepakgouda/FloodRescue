@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd"
+                 xmlns:srv="http://www.isotc211.org/2005/srv"
+                 xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:geonet="http://www.fao.org/geonetwork"
+                 xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://www.isotc211.org/2005/gmd/gmd.xsd    http://www.opengis.net/gml http://www.opengis.net/gml/gml.xsd"
+                 xmlns:dcat="http://www.w3.org/ns/dcat#"
+                 xmlns:dcam="http://purl.org/dc/dcam/"
+                 xmlns:aglsterms="http://www.agls.gov.au/agls/terms/"
+                 xmlns:agentterms="http://www.agls.gov.au/agls/agentterms/"
+                 xmlns:availterms="http://www.agls.gov.au/agls/availterms/"
+                 xmlns:adminterms="http://www.agls.gov.au/agls/adminterms/"
+                 xmlns:dct="http://purl.org/dc/terms/">
+    <gmd:fileIdentifier>
+        <gco:CharacterString>4a870cc6-31ef-463c-bbc5-81f7ae5b222f</gco:CharacterString>
+    </gmd:fileIdentifier>
+    <gmd:language>
+        <gco:CharacterString>eng</gco:CharacterString>
+    </gmd:language>
+    <gmd:characterSet>
+        <gmd:MD_CharacterSetCode codeListValue="utf8"
+                                 codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode">
+            utf8
+        </gmd:MD_CharacterSetCode>
+    </gmd:characterSet>
+    <gmd:hierarchyLevel>
+        <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                          codeListValue="dataset">dataset
+        </gmd:MD_ScopeCode>
+    </gmd:hierarchyLevel>
+    <gmd:contact>
+        <gmd:CI_ResponsibleParty>
+            
+                <gmd:organisationName>
+                    <gco:CharacterString>Bureau of Meteorology</gco:CharacterString>
+                </gmd:organisationName>
+            
+            <contactInfo>
+                <CI_Contact>
+                    <phone>
+                        <CI_Telephone>
+                            
+                        </CI_Telephone>
+                    </phone>
+                    <address>
+                        <CI_Address>
+                            
+                                <electronicMailAddress>
+                                    <gco:CharacterString>tides@bom.gov.au</gco:CharacterString>
+                                </electronicMailAddress>
+                            
+                        </CI_Address>
+                    </address>
+                </CI_Contact>
+            </contactInfo>
+            <gmd:role>
+                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode"
+                                 codeListValue="pointOfContact">pointOfContact
+                </gmd:CI_RoleCode>
+            </gmd:role>
+        </gmd:CI_ResponsibleParty>
+    </gmd:contact>
+    <gmd:dateStamp>
+        <gco:Date>2017-07-31T00:16:11.518803</gco:Date>
+    </gmd:dateStamp>
+    <gmd:metadataStandardName>
+        <gco:CharacterString>ANZLIC Metadata Profile: An Australian/New Zealand Profile of AS/NZS ISO 19115:2005,
+            Geographic information - Metadata
+        </gco:CharacterString>
+    </gmd:metadataStandardName>
+    <gmd:metadataStandardVersion>
+        <gco:CharacterString>1.1</gco:CharacterString>
+    </gmd:metadataStandardVersion>
+    <gmd:identificationInfo>
+        <gmd:MD_DataIdentification>
+            <gmd:citation>
+                <gmd:CI_Citation>
+                    <gmd:title>
+                        <gco:CharacterString>tide-gauge-sea-level-dataset-for-australasia-abslmp-australian-baseline-sea-level-monitoring-pr</gco:CharacterString>
+                    </gmd:title>
+                    <gmd:date>
+                        <gmd:CI_Date>
+                            <gmd:date>
+                                <gco:Date>2017-07-31T00:16:11.335510</gco:Date>
+                            </gmd:date>
+                            <gmd:dateType>
+                                <gmd:CI_DateTypeCode
+                                        codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode"
+                                        codeListValue="publication">publication</gmd:CI_DateTypeCode>
+                            </gmd:dateType>
+                        </gmd:CI_Date>
+                    </gmd:date>
+                    <edition>
+                        <gco:CharacterString>2c9c095d-ddfe-4bb3-af0b-7d2677cd9115</gco:CharacterString>
+                    </edition>
+                    <identifier>
+                        <MD_Identifier>
+                            <code>
+                                <gco:CharacterString>4a870cc6-31ef-463c-bbc5-81f7ae5b222f</gco:CharacterString>
+                            </code>
+                        </MD_Identifier>
+                    </identifier>
+                    <citedResponsibleParty>
+                        <CI_ResponsibleParty>
+                            
+                                <individualName>
+                                    <gco:CharacterString>Bureau of Meteorology</gco:CharacterString>
+                                </individualName>
+                            
+                            <role>
+                                <CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="author">author</CI_RoleCode>
+                            </role>
+                        </CI_ResponsibleParty>
+                    </citedResponsibleParty>
+                </gmd:CI_Citation>
+            </gmd:citation>
+            <gmd:abstract>
+                <gco:CharacterString>This dataset is hourly data values (averaged from 6 minute values),  per seaframe station, for sea level, barometric pressure, water temperature, air temperature, sea level Adjusted Residuals, sea level Residuals, wind speed, wind gust, and wind direction*.
+(Only sea level data is available, from Lorne and Stony Point stations )
+
+Data is from approximately 1992, from the following 16 tide gauge stations (14 operated by BOM) : Townsville - Cape Ferguson [QLD] (1991+), Rockhampton - Rosslyn Bay [QLD] (1992+), Port Kembla [NSW] (1991+), Stony Point [VIC] (1993+), Lorne [VIC] (1993+), Burnie [TAS] (1992+), Triabunna - Spring Bay [TAS] (1991+), Portland [VIC] (1991+), Adelaide - Port Stanvac [S.A] (1992 to 2010), Thevenard [S.A.] (1992+), Esperance [W.A.] (1992+), Perth - Hillarys [W.A.] (1992+), Broome [W.A.] (1991+), Darwin [N.T] (1991+), Milner Bay - Groote Eylandt [N.T] (1993+), Cocos (Keeling) Islands (Indian Ocean) (1993+) 
+A summary of each station&#39;s position (lat, long, SSBM, AHD) is available from http://www.bom.gov.au/oceanography/projects/abslmp/data/data.shtml
+More station detail (including Australian Height Datum in metres above that station&#39;s Tide Gauge Zero, latitude, longitude, monitoring equipment, the station&#39;s BOM Station#, ANTT#, GLOSS ID, etc), are available by clicking the port name, on the webpage, or by using this URL formula:
+      http://www.bom.gov.au/ntc/IDO50000/IDO50000_[ANTT#].pdf
+eg for ROSSLYN BAY NTC AWS
+      http://www.bom.gov.au/ntc/IDO50000/IDO50000_59670.pdf
+(the ANTT# is provided in the Keywords section of this metadata record)
+Dates and times, in the data, are given in Universal Time Coordinated (UTC).
+Sea level values are in metres above Tide Gauge Zero (e.g. 1.205 metres)
+(The Australian Height Datum in metres above tide gauge zero is provided in the station details PDF document.To convert the data to be relative to AHD, subtract that station&#39;s  AHD value from the observed sea level value.)
+Missing or erroneous values are set to a value of -9999
+14 of the 16 stations are SEAFRAME stations which measure sea level very accurately, and also record meteorological parameters (such as air and water temperature, pressure and wind observations).</gco:CharacterString>
+            </gmd:abstract>
+            <gmd:language>
+                <gco:CharacterString>eng</gco:CharacterString>
+            </gmd:language>
+            
+            
+                <gmd:status>
+                    <gco:CharacterString>inactive</gco:CharacterString>
+                </gmd:status>
+            
+            <gmd:extent>
+                
+                <gmd:EX_Extent>
+                    
+                    <gmd:geographicElement>
+                        
+                        <gmd:EX_GeographicBoundingBox>
+                        <gmd:westBoundLongitude><gco:Decimal>110.0</gco:Decimal></gmd:westBoundLongitude>
+                        <gmd:eastBoundLongitude><gco:Decimal>160.0</gco:Decimal></gmd:eastBoundLongitude>
+                        <gmd:southBoundLatitude><gco:Decimal>-45.0</gco:Decimal></gmd:southBoundLatitude>
+                        <gmd:northBoundLatitude><gco:Decimal>-5.0</gco:Decimal></gmd:northBoundLatitude>
+                        </gmd:EX_GeographicBoundingBox>
+                        
+                    </gmd:geographicElement>
+                    
+                    <gmd:temporalElement>
+                        <gmd:EX_TemporalExtent>
+                            <gmd:extent>
+                                <gml:TimePeriod gml:id="TP01">
+                                    <gml:beginPosition>None</gml:beginPosition>
+                                    <gml:endPosition>None</gml:endPosition>
+                                </gml:TimePeriod>
+                            </gmd:extent>
+                        </gmd:EX_TemporalExtent>
+                    </gmd:temporalElement>
+
+                </gmd:EX_Extent>
+                
+            </gmd:extent>
+        </gmd:MD_DataIdentification>
+    </gmd:identificationInfo>
+    <resourceMaintenance>
+        <MD_MaintenanceInformation>
+            <maintenanceAndUpdateFrequency>
+                <MD_MaintenanceFrequencyCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="monthly">monthly</MD_MaintenanceFrequencyCode>
+            </maintenanceAndUpdateFrequency>
+        </MD_MaintenanceInformation>
+    </resourceMaintenance>
+    <descriptiveKeywords>
+        <MD_Keywords>
+            
+                <keyword>
+                    <gco:CharacterString>Air Temperature</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Air pressure at sea level</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Atmosphere</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Atmospheric Pressure</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Atmospheric Pressure Measurements</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Atmospheric Temperature</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Atmospheric/Ocean Indicators</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Australasia</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>BROOME NTC AWS  [ANTT# 62650 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>BURNIE NTC AWS  [ANTT# 60910 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>CAPE FERGUSON NTC AWS  [ANTT# 59260 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>COCOS ISLAND NTC AWS  [ANTT# 46280 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Climate Indicators</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DARWIN NTC AWS  [ANTT# 63230 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Pressure-Barometric (hPa)</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Sea-Level (above tide gauge zero)</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Sea-Surface-Temperature (celsius)</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Temperature-Air   (celsius)</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Wind Speed (m/s)</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Wind-Direction</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataParam: Wind-Gust</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataType: Point data</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>DataValueType: Hourly</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>ESPERANCE NTC AWS   [ANTT# 62080 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Earth Science</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>GROOTE EYLANDT NTC AWS  [ANTT# 63511 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>HILLARYS BOAT HARBOUR NTC AWS  [ANTT# 62237 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>LORNE PIER  [ANTT# 60790 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>MARINE-Coasts</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>MARINE-Meteorology</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Ocean Temperature</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Oceans</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>PORT KEMBLA NTC AWS  [ANTT# 60420 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>PORT STANVAC  [ANTT# 61583 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>PORTLAND NTC AWS  [ANTT# 61410 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>QCtype: Observations (1 minute frequency) averaged</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>ROSSLYN BAY NTC AWS  [ANTT# 59670 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>SPRING BAY NTC AWS  [ANTT# 61170 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>STONY POINT JETTY NTC AWS  [ANTT# 60710 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Sea Level Pressure</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Sea Level Rise</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Sea level change monitoring</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Sea level change trends</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Sea level rise</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Sea surface height above tide gauge zero</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Thevenard Island  [ANTT# 62000 ]</gco:CharacterString>
+                </keyword>
+            
+                <keyword>
+                    <gco:CharacterString>Water Temperature</gco:CharacterString>
+                </keyword>
+            
+        </MD_Keywords>
+    </descriptiveKeywords>
+    
+    
+
+    <resourceConstraints>
+        <MD_LegalConstraints>
+            <accessConstraints>
+                <MD_RestrictionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</MD_RestrictionCode>
+            </accessConstraints>
+            <otherConstraints>
+                <gco:CharacterString>license</gco:CharacterString>
+            </otherConstraints>
+        </MD_LegalConstraints>
+    </resourceConstraints>
+    <resourceConstraints>
+        <MD_LegalConstraints>
+            <useConstraints>
+                <MD_RestrictionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_RestrictionCode" codeListValue="license">license</MD_RestrictionCode>
+            </useConstraints>
+            <useConstraints>
+                <MD_RestrictionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions">otherRestrictions</MD_RestrictionCode>
+            </useConstraints>
+            <otherConstraints>
+                <gco:CharacterString>Other</gco:CharacterString>
+            </otherConstraints>
+        </MD_LegalConstraints>
+    </resourceConstraints>
+    <resourceConstraints>
+        <MD_SecurityConstraints>
+            <classification>
+                <MD_ClassificationCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_ClassificationCode" codeListValue="unclassified">unclassified</MD_ClassificationCode>
+            </classification>
+        </MD_SecurityConstraints>
+    </resourceConstraints>
+    <topicCategory>
+        <MD_TopicCategoryCode>geoscientificInformation</MD_TopicCategoryCode>
+    </topicCategory>
+    
+        <gmd:distributionInfo>
+            <gmd:MD_Distribution>
+                <gmd:distributionFormat>
+                    <gmd:MD_Format>
+                        <gmd:name>
+                            <gco:CharacterString>CSV</gco:CharacterString>
+                        </gmd:name>
+                        <gmd:version gco:nilReason="missing">
+                            <gco:CharacterString/>
+                        </gmd:version>
+                    </gmd:MD_Format>
+                </gmd:distributionFormat>
+                <gmd:transferOptions>
+                    <gmd:MD_DigitalTransferOptions>
+                        <gmd:onLine>
+                            <gmd:CI_OnlineResource>
+                                <gmd:linkage>
+                                    <gmd:URL>http://www.bom.gov.au/ntc/IDO71001/IDO71001_2017.csv</gmd:URL>
+                                </gmd:linkage>
+                                
+                                
+                                    <protocol>
+                                        <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
+                                    </protocol>
+                                
+                                <gmd:transferSize>
+                                    <gco:Real>None</gco:Real>
+                                </gmd:transferSize>
+                                <gmd:name>
+                                    <gco:CharacterString>DownloadableData : example url  for CAPE FERGUSON for 2017 ( replace YYYY with a year, in  http://www.bom.gov.au/ntc/IDO71001/IDO71001_[YYYY].csv )</gco:CharacterString>
+                                </gmd:name>
+                                <gmd:description>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:description>
+                                
+                                
+                                
+                                    <function>
+                                        <CI_OnLineFunctionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download">download</CI_OnLineFunctionCode>
+                                    </function>
+                                
+
+                            </gmd:CI_OnlineResource>
+                        </gmd:onLine>
+                    </gmd:MD_DigitalTransferOptions>
+                </gmd:transferOptions>
+            </gmd:MD_Distribution>
+        </gmd:distributionInfo>
+    
+        <gmd:distributionInfo>
+            <gmd:MD_Distribution>
+                <gmd:distributionFormat>
+                    <gmd:MD_Format>
+                        <gmd:name>
+                            <gco:CharacterString>CSV</gco:CharacterString>
+                        </gmd:name>
+                        <gmd:version gco:nilReason="missing">
+                            <gco:CharacterString/>
+                        </gmd:version>
+                    </gmd:MD_Format>
+                </gmd:distributionFormat>
+                <gmd:transferOptions>
+                    <gmd:MD_DigitalTransferOptions>
+                        <gmd:onLine>
+                            <gmd:CI_OnlineResource>
+                                <gmd:linkage>
+                                    <gmd:URL>http://www.bom.gov.au/ntc/IDO71002/IDO71002_2017.csv</gmd:URL>
+                                </gmd:linkage>
+                                
+                                
+                                    <protocol>
+                                        <gco:CharacterString>WWW:DOWNLOAD-1.0-http--download</gco:CharacterString>
+                                    </protocol>
+                                
+                                <gmd:transferSize>
+                                    <gco:Real>None</gco:Real>
+                                </gmd:transferSize>
+                                <gmd:name>
+                                    <gco:CharacterString>DownloadableData : example url  for Rosslyn Bay for 2016 ( replace YYYY with a year, in  http://www.bom.gov.au/ntc/IDO71002/IDO71002_[YYYY].csv )</gco:CharacterString>
+                                </gmd:name>
+                                <gmd:description>
+                                    <gco:CharacterString></gco:CharacterString>
+                                </gmd:description>
+                                
+                                
+                                
+                                    <function>
+                                        <CI_OnLineFunctionCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download">download</CI_OnLineFunctionCode>
+                                    </function>
+                                
+
+                            </gmd:CI_OnlineResource>
+                        </gmd:onLine>
+                    </gmd:MD_DigitalTransferOptions>
+                </gmd:transferOptions>
+            </gmd:MD_Distribution>
+        </gmd:distributionInfo>
+    
+
+    <gmd:dataQualityInfo>
+        <gmd:DQ_DataQuality>
+            <gmd:scope>
+                <gmd:DQ_Scope>
+                    <gmd:level>
+                        <gmd:MD_ScopeCode
+                                codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode"
+                                codeListValue="dataset" codeSpace="domainCode">dataset</gmd:MD_ScopeCode>
+                    </gmd:level>
+                    <gmd:levelDescription>
+                        <gmd:MD_ScopeDescription>
+                            <gmd:dataset gco:nilReason="missing">
+                                <gco:CharacterString/>
+                            </gmd:dataset>
+                        </gmd:MD_ScopeDescription>
+                    </gmd:levelDescription>
+                </gmd:DQ_Scope>
+            </gmd:scope>
+            <gmd:lineage>
+                <gmd:LI_Lineage>
+                    <gmd:statement gco:nilReason="missing">
+                        <gco:CharacterString/>
+                    </gmd:statement>
+                    <gmd:source>
+                        <gmd:LI_Source>
+                            <gmd:description gco:nilReason="missing">
+                                <gco:CharacterString/>
+                            </gmd:description>
+                        </gmd:LI_Source>
+                    </gmd:source>
+                </gmd:LI_Lineage>
+            </gmd:lineage>
+        </gmd:DQ_DataQuality>
+    </gmd:dataQualityInfo>
+    <metadataConstraints>
+        <MD_SecurityConstraints>
+            <classification>
+                <MD_ClassificationCode codeList="http://asdd.ga.gov.au/asdd/profileinfo/gmxCodelists.xml#MD_ClassificationCode" codeListValue="unclassified">unclassified</MD_ClassificationCode>
+            </classification>
+        </MD_SecurityConstraints>
+    </metadataConstraints>
+</gmd:MD_Metadata>
