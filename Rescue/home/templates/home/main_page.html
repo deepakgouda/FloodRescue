@@ -1,12 +1,9 @@
 {% extends "home/unknownbase.html" %}
 {% load staticfiles %}
 {% block body_unknownbase %}
-    <a href="{% url 'peoples:make_request' %}">Request for help</a><br>
-    <a href="{% url 'peoples:person_finder'%}">Find Missing Person</a><br>
-    <a href="{% url 'peoples:all_shelters'%}">Relief Camps</a><br>
-    <a href="{% url 'peoples:all_request'%}">Registered Requests</a><br>
-    <a href="{% url 'peoples:volunteering'%}">Volunteer and NGO</a><br>
-    <a href="{% url 'map:overview'%}">MAPS</a><br>
-
-    <a href="{% url 'peoples:make_request' %}"></a><br>
+    <a href="{% url 'peoples:main_page'%}">People</a><br>
+    <a href="{% url 'map:overview'%}">Maps</a><br>
+    <a href="{% url 'peoples:search_missing_person'%}">Search Missing Person</a><br>
+    <a href="{% url 'peoples:volunteer_regist'%}">Volunteer Registration</a><br>
+    <a href="{% url 'peoples:ngo_regist'%}">NGO Registration</a><br>
 {% endblock %}

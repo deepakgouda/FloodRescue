@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script type='text/javascript'>
+        function random_position() {
+        return Math.random()*40;
+    }
+
+    </script>
+    <script>
+        $(document).ready(function(){
+           $("#myMap").css("height", String(screen.height*0.7));
+        });
+    </script>
+</head>
+<body>
+
+<h3>People's Tab</h3>
+    <div id="text"> </div>
+    <a href="{% url 'peoples:add_shelter' %}" >Add Shelter</a><br>
+    <a href="{% url 'peoples:all_shelters' %}" >All Shelters</a><br>
+    <a href="{% url 'peoples:add_group' %}" >Add Group</a><br>
+    <a href="{% url 'peoples:get_group' %}" >Get Group</a><br>
+    <a href="{% url 'peoples:volunteering' %}" >Volunteering</a><br>
+    <a href="{% url 'peoples:volunteer_regist' %}" >Volunteer Registration</a><br>
+    <a href="{% url 'peoples:all_volunteers' %}" >All Volunteers</a><br>
+    <a href="{% url 'peoples:ngo_regist' %}" >NGO Registration</a><br>
+    <a href="{% url 'peoples:all_ngos' %}" >All NGOs</a><br>
+    <a href="{% url 'peoples:print_POST_request' %}" >Print POST Request</a><br>
+    <a href="{% url 'peoples:all_request' %}" >All Requests</a><br>
+    <a href="{% url 'peoples:make_request' %}" >Make Requests</a><br>
+    <a href="{% url 'peoples:person_finder' %}" >Person Finder</a><br>
+    <a href="{% url 'peoples:missing_person_request' %}" >Missing Person Request</a><br>
+    <a href="{% url 'peoples:search_missing_person' %}" >Search Missing Person</a><br>
+
+    <!--<div id="myMap" style="position:relative;width:80%;height:820px;border:solid;border-width:2px;margin:0 auto;"></div>-->
+</body>
+</html>
+
+

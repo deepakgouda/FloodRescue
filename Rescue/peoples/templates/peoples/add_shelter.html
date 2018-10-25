@@ -19,10 +19,10 @@
 		<form method="POST" style="border:solid;border-width:3px;padding:20px;display:inline-block;text-align: center;">
 			{% csrf_token %}
             <input type="text" name="name" placeholder="Shelter Name" size="30" required><br>
-			<input id="address" type="text" name="address" size="30" placeholder="Village/City"><br>
-            <input type="text" name="capacity" placeholder="Capacity" size="30"><br>
-			<input id="lat" type="text" name="location_log" size="30" placeholder="Latitude"><br>
-			<input id="long" type="text" name="location_lat" size="30" placeholder="Longitude"><br>
+			<input id="address" type="text" name="address" size="30" placeholder="Village/City" required><br>
+            <input type="text" name="capacity" placeholder="Capacity" size="30" required><br>
+			<input id="lat" type="text" name="location_log" size="30" placeholder="Latitude" required><br>
+			<input id="long" type="text" name="location_lat" size="30" placeholder="Longitude" required><br>
 			<input type="submit" value="Submit" width=30/>
 		</form>
 		<div id="th"></div>

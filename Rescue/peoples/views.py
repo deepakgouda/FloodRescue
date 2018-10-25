@@ -13,6 +13,10 @@ db=client.django
 
 
 # Create your views here.
+def main_page(request):
+    return render(request, 'peoples/main_page.html')
+
+
 def person_finder(request):
     coll = db.shelter
     coll.insert_one({"name": "lll", "capacity": 111, "used_capacity": 0, "resource_left": 0, "location_lat": 20.144, "location_log": 83.79})
@@ -23,17 +27,17 @@ def person_finder(request):
 
 
 def all_shelters(request):
-    shelters=db.shelter
+    shelters = db.shelter
     res = shelters.find()
-    return render(request,'peoples/all_shelters.html',{'shelters': res})
+    return render(request, 'peoples/all_shelters.html', {'shelters': res})
 
 def add_shelter(request):
     collection=db.shelter
     if request.method == "POST":
         form = ShelterForm(request.POST)
         if form.is_valid():
-            print(form.cleaned_data['name'])
-            print(form.cleaned_data['capacity'])
+            # print(form.cleaned_data['name'])
+            # print(form.cleaned_data['capacity'])
             collection.insert_one({"name": form.cleaned_data['name'], "capacity": form.cleaned_data['capacity'],
                                    "location":form.cleaned_data["address"],
                                     "location_lat": form.cleaned_data["location_lat"],
