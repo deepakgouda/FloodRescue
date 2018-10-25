@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script>
+        function ipLookUp () {
+          $.ajax('http://ip-api.com/json')
+          .then(
+              function success(response) {
+                  console.log('User\'s Location Data is ', response);
+                  console.log('User\'s Country', response.country);
+
+              },
+
+              function fail(data, status) {
+                  console.log('Request failed.  Returned status of',
+                              status);
+              }
+          );
+        }
+        ipLookUp()
+    </script>
+</head>
+<body>
+    <form method="POST" style="width:120%;position:relative;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type = "submit">Post</button>
+    </form>
+
+</body>
+</html>
