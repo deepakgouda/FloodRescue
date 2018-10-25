@@ -6,6 +6,12 @@
 			input,textarea{
 				margin:5px;
 			}
+            body{
+				background-color:#f2f2f2;
+			}
+			div{
+				background-color:white;
+			}
 		</style>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
@@ -14,9 +20,9 @@
 
         <!--{% csrf_token %}-->
         <!--{{ form.as_p }}-->
-
-    <h1>NGO Registration</h1>
+        <div style="border:solid;border-width:1px;position:absolute;left:30%;top:15%;diplay:inline-block;">
 		<form method="POST" style="border:solid;border-width:3px;padding:20px;display:inline-block;text-align: center;">
+            <h1>NGO Registration</h1>
 			{% csrf_token %}
             <input type="text" name="organisation_name" placeholder="Organisation Name" size="30" required><br>
             <input type="text" name="organisation_type" placeholder="Organisation Type" size="30" required><br>
@@ -35,7 +41,7 @@
             </select><br>
 			<input type="submit" value="Submit" width=30/>
 		</form>
-		<div id="th"></div>
+		</div>
 		<script>
 			$( "#address" ).focusout(function() {
 			  var uri="http://dev.virtualearth.net/REST/v1/Locations/";

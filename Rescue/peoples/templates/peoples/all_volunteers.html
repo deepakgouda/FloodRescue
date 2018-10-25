@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <title>Volunteer List</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+				background-color:#f2f2f2;
+			}
+    </style>
 </head>
 <body>
+<br><br><br>
+<div class="container" style="border:solid;border-width;">
+  <h2>Volunteers List</h2>
+  <table class="table table-striped" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Area Of Volunteering</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for volunteer in volunteers %}
-        {{volunteer}}
-    {% endfor %}
+            <tr>
+                <td>{{volunteer.name}}</td>
+                <td>{{volunteer.contact}}</td>
+                <td>{{volunteer.area_of_volunteering}}</td>
+                <td>{{volunteer.address}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</div>
+
 </body>
 </html>

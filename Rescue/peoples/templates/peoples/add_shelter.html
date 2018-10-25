@@ -6,27 +6,30 @@
 			input,textarea{
 				margin:5px;
 			}
+			body{
+				background-color:#f2f2f2;
+			}
+			div{
+				background-color:white;
+			}
 		</style>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-
 	</head>
 	<body>
-    <!--<form method="POST" style="width:120%;position:relative;">-->
-        <!--{% csrf_token %}-->
-        <!--{{ form.as_p }}-->
-        <!--<button type = "submit">Post</button>-->
-    <!--</form>-->
-    <h1>Add Shelter</h1>
-		<form method="POST" style="border:solid;border-width:3px;padding:20px;display:inline-block;text-align: center;">
-			{% csrf_token %}
-            <input type="text" name="name" placeholder="Shelter Name" size="30" required><br>
-			<input id="address" type="text" name="address" size="30" placeholder="Village/City" required><br>
-            <input type="text" name="capacity" placeholder="Capacity" size="30" required><br>
-			<input id="lat" type="text" name="location_log" size="30" placeholder="Latitude" required><br>
-			<input id="long" type="text" name="location_lat" size="30" placeholder="Longitude" required><br>
-			<input type="submit" value="Submit" width=30/>
-		</form>
-		<div id="th"></div>
+		<div style="border:solid;border-width:1px;position:absolute;left:30%;top:15%;diplay:inline-block;">
+
+			<form method="POST" style="border:solid;border-width:3px;padding:20px;display:inline-block;text-align: center;">
+				<h1>Add Shelter</h1>
+				{% csrf_token %}
+				<input type="text" name="name" placeholder="Shelter Name" size="30" required><br>
+				<input id="address" type="text" name="address" size="30" placeholder="Village/City" required><br>
+				<input type="text" name="capacity" placeholder="Capacity" size="30" required><br>
+				<input id="lat" type="text" name="location_log" size="30" placeholder="Latitude" required><br>
+				<input id="long" type="text" name="location_lat" size="30" placeholder="Longitude" required><br>
+				<input type="submit" value="Submit" width=30 />
+			</form>
+		</div>
+
 		<script>
 			$( "#address" ).focusout(function() {
 			  var uri="http://dev.virtualearth.net/REST/v1/Locations/";

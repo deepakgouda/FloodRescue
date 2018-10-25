@@ -29,6 +29,7 @@ def person_finder(request):
 def all_shelters(request):
     shelters = db.shelter
     res = shelters.find()
+    #res=[{"name":"Indore","resource_left":20,"used_capacity":10},{"name":"Odish","resource_left":500,"used_capacity":100},{"name":"Chennai","resource_left":40,"used_capacity":200},{"name":"India","resource_left":400,"used_capacity":1000},{"name":"rajpur","resource_left":400,"used_capacity":30}]
     return render(request, 'peoples/all_shelters.html', {'shelters': res})
 
 def add_shelter(request):
@@ -57,6 +58,7 @@ def volunteering(request):
 def all_volunteers(request):
     personCol = db.person
     res = personCol.find({"Status": 3})
+    #res=[{"name":"Bharti","address":"Odisha","contact":1237813912},{"name":"Kranti","address":"Indore","contact":23768712}]
     return render(request, 'peoples/all_volunteers.html', {'volunteers': res})
 
 
@@ -80,7 +82,9 @@ def volunteer_regist(request):
 
 
 def all_ngos(request):
-    ngos = NGOS.objects.all()
+    ngo_dict = db.NGO
+    ngos = ngo_dict.find()
+    #ngos=[{"name":"Bharti","address":"Odisha","contact":1237813912},{"name":"Kranti","address":"Indore","contact":23768712}]
     return render(request,'peoples/all_ngos.html',{'ngos':ngos})
 
 
@@ -106,7 +110,10 @@ def ngo_regist(request):
 
 
 def all_request(request):
-    requests = Request.objects.all()
+    requestsCol = db.requests
+    #requests = requestsCol.find()
+    requests=[{"name":"Bharti","address":"Odisha","contact":1237813912},{"name":"Kranti","address":"Indore","contact":23768712}]
+
     return render(request,'peoples/all_request.html',{'requests':requests})
 
 
