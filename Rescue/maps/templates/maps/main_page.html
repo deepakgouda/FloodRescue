@@ -11,7 +11,7 @@
             async defer></script>
 
     <script type='text/javascript'>
-    function random_position() {
+        function random_position() {
         return Math.random()*40;
     }
     function GetMap()
@@ -25,38 +25,26 @@
         var maxLong=-10000;
         var minLat=10000;
         var minLong=10000;
-        $.ajax({
-                url:"http://127.0.0.1:8000/api/v1/shelters/",
-                async: false,//added so that the variable outside the ajax can be updated
-                success:function(result){
-                    var i=0;
-                    for(i=0;i<result['length'];i++){
-                        var curr_lat=result[i]['location_lat'];
-                        var curr_long=result[i]['location_log'];
-                        console.log(result[i]['location_lat'])
-                        console.log(result[i]['location_log'])
-                        var loc=new Microsoft.Maps.Location(curr_lat,curr_long);
-                        console.log(loc)
-                        var pin = createFontPushpin(loc, '\uf015', 'FontAwesome', 20, 'red',result[i]['name'],result[i]['capacity']);
-                        if(curr_lat+1>maxLat){
-                            maxLat=curr_lat+2;
-                        }
-                        if(curr_long+1>maxLong){
-                            maxLong=curr_long+2;
-                        }
-                        if(curr_long-1<minLong){
-                            minLong=curr_long-2;
-                        }
-                        if(curr_lat-1<minLat){
-                            minLat=curr_lat-2;
-                        }
-                        map.entities.push(pin);
-                    };
-                },
-                error:function(){
-                    console.log("fail");
-                }
-            });
+        {% for location in locations %}
+            var curr_lat= {{location.0}};
+            var curr_long={{location.1}};
+            var loc=new Microsoft.Maps.Location(curr_lat,curr_long);
+            var pin = createFontPushpin(loc, '\uf015', 'FontAwesome', 20, 'red',"dshj","asdnbd");
+            map.entities.push(pin);
+            if(curr_lat+1>maxLat){
+                maxLat=curr_lat+2;
+            }
+            if(curr_long+1>maxLong){
+                maxLong=curr_long+2;
+            }
+            if(curr_long-1<minLong){
+                minLong=curr_long-2;
+            }
+            if(curr_lat-1<minLat){
+                minLat=curr_lat-2;
+            }
+        {% endfor %}
+
 
         var box=new Microsoft.Maps.LocationRect.fromEdges(maxLat,minLong,minLat,maxLong);
         //var center=new Microsoft.Maps.Location((maxLat+minLat)/2,(maxLong+minLong)/2);
@@ -90,9 +78,12 @@
             anchor: new Microsoft.Maps.Point(c.width / 2, c.height / 2) //Align center of pushpin with location.
         });
     }
-    window.setInterval(function() {
-         GetMap();
-    }, 100000);
+
+    </script>
+    <script>
+        $(document).ready(function(){
+           $("#myMap").css("height", String(screen.height*0.7));
+        });
     </script>
 </head>
 <body>
@@ -101,7 +92,7 @@
     <a href="{% url 'maps:flooded' %}" >Flooded Area</a>
     <a href="{% url 'maps:vehicles' %}" >Vehicles</a>
     <a href="{% url 'maps:shelter' %}" >Shelters</a>
-    <div id="myMap" style="position:relative;width:1300px;height:500px;background:red;"></div>
+    <div id="myMap" style="position:relative;width:80%;height:820px;border:solid;border-width:2px;margin:0 auto;"></div>
 </body>
 </html>
 

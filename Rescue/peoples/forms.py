@@ -6,7 +6,7 @@ class ShelterForm(forms.ModelForm):
 
     class Meta:
         model = Shelter
-        fields = ('name', 'location_lat','location_log','capacity')
+        fields = ('name','address', 'location_lat','location_log','capacity')
 
 class Volunteer_registForm(forms.ModelForm):
 

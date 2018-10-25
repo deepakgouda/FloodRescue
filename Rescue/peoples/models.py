@@ -49,6 +49,7 @@ class Person(models.Model):
         return '{}-{}-{}'.format(self.name,self.aadhar,self.address)
 class Shelter(models.Model):
     name=models.CharField(max_length=30,blank=True,default='')
+    address=models.CharField(max_length=70,blank=True,default='')
     location_lat=models.FloatField(default=0,blank=True,)
     location_log = models.FloatField(default=0, blank=True,)
     capacity=models.IntegerField(default=0, blank=True, )

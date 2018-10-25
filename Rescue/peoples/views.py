@@ -32,7 +32,10 @@ def add_shelter(request):
     if request.method == "POST":
         form = ShelterForm(request.POST)
         if form.is_valid():
+            print(form.cleaned_data['name'])
+            print(form.cleaned_data['capacity'])
             collection.insert_one({"name": form.cleaned_data['name'], "capacity": form.cleaned_data['capacity'],
+                                   "location":form.cleaned_data["address"],
                                     "location_lat": form.cleaned_data["location_lat"],
                                    "location_log": form.cleaned_data["location_log"],
                                    "resources_left": 0, "used_capacity": 0})
@@ -295,6 +298,15 @@ def battery_stat(request):
         if members[str(i)] is 1:
             new_id = i
             break
+    # active_person=personCol.find_one({"PersonID": int(new_id)})
+    # for i in members:
+    #     curr_memb=personCol.find_one({"PersonID": int(i)})
+    #     subject = "Number of "+curr_memb["Name"] +"is changed"
+    #     from_email = settings.EMAIL_HOST_USER
+    #     to_email = curr_memb["Sec_mail"]
+    #     signup_message = "Now you can contact "+curr_memb["Name"] +"by calling at"+active_person["PhoneNo"]+"( "+active_person["Name"]+" )"
+    #     send_mail(subject=subject, from_email=from_email, recipient_list=to_email, message=signup_message,
+    #               fail_silently=False, )
 
     # `new_id` is the new active member. Send mail to all grp member's relatives regarding the new active member
     print(members)
