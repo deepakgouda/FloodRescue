@@ -102,7 +102,7 @@ def ngo_regist(request):
     else:
         form = NGO_registForm()
 
-    return render(request, 'peoples/add_shelter.html', {'form': form,})
+    return render(request, 'peoples/ngo_registration.html', {'form': form,})
 
 
 def all_request(request):
@@ -115,18 +115,18 @@ def make_request(request):
     print("view called")
     if request.method == "POST":
         form = RequestForm(request.POST)
-        print(form)
-        print("fomr posted")
-        print(form.is_valid())
+        # print(form)
+        # print("form posted")
+        # print(form.is_valid())
         if form.is_valid():
-            print(form)
-            # req.insert_one({"requestee_name": form.cleaned_data['requestee_name'],
-            #                 "requestee_phone_no": form.cleaned_data['requestee_phone_no'],
-            #                 "requestee_location": form.cleaned_data["requestee_location"],
-            #                 "location_lat": form.cleaned_data["location_lat"],
-            #                 "location_log": form.cleaned_data["location_log"],
-            #                 "need": form.cleaned_data["need"]
-            #                 })
+            # print(form)
+            req.insert_one({"requestee_name": form.cleaned_data['requestee_name'],
+                            "requestee_phone_no": form.cleaned_data['requestee_phone_no'],
+                            "requestee_location": form.cleaned_data["requestee_location"],
+                            "location_lat": form.cleaned_data["location_lat"],
+                            "location_log": form.cleaned_data["location_log"],
+                            "need": form.cleaned_data["need"]
+                            })
             # shelter = form.save(commit=False)
             # post.author = get_object_or_404(Person,person_user=request.user)
             # shelter.save()
