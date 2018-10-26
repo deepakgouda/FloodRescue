@@ -18,11 +18,11 @@ def main_page(request):
 
 
 def person_finder(request):
-    coll = db.shelter
-    coll.insert_one({"name": "lll", "capacity": 111, "used_capacity": 0, "resource_left": 0, "location_lat": 20.144, "location_log": 83.79})
-    coll.insert_one({"name": "ppp", "capacity": 222, "used_capacity": 0, "resource_left": 0, "location_lat": 19.391, "location_log": 82.38})
-    coll.insert_one({"name": "qqq", "capacity": 333, "used_capacity": 0, "resource_left": 0, "location_lat": 19.30, "location_log": 83.94})
-    coll.insert_one({"name": "qqq", "capacity": 333, "used_capacity": 0, "resource_left": 0, "location_lat": 20.69, "location_log": 86.56})
+    # coll = db.shelter
+    # coll.insert_one({"name": "lll", "capacity": 111, "used_capacity": 0, "resource_left": 0, "location_lat": 20.144, "location_log": 83.79})
+    # coll.insert_one({"name": "ppp", "capacity": 222, "used_capacity": 0, "resource_left": 0, "location_lat": 19.391, "location_log": 82.38})
+    # coll.insert_one({"name": "qqq", "capacity": 333, "used_capacity": 0, "resource_left": 0, "location_lat": 19.30, "location_log": 83.94})
+    # coll.insert_one({"name": "qqq", "capacity": 333, "used_capacity": 0, "resource_left": 0, "location_lat": 20.69, "location_log": 86.56})
     return render(request, 'peoples/person_finder.html')
 
 
@@ -112,7 +112,7 @@ def ngo_regist(request):
 def all_request(request):
     requestsCol = db.requests
     #requests = requestsCol.find()
-    requests=[{"name":"Bharti","address":"Odisha","contact":1237813912},{"name":"Kranti","address":"Indore","contact":23768712}]
+    requests=[{"requestee_name":"Bharti","requestee_location":"Odisha","requestee_phone_no":1237813912,"need":"rescue"},{"requestee_name":"Kranti","requestee_location":"Indore","requestee_phone_no":23768712,"need":"rescue and resources"}]
 
     return render(request,'peoples/all_request.html',{'requests':requests})
 
