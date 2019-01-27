@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+	<head>
+  		<meta charset="utf-8">
+		<style>
+			input,textarea{
+				margin:5px;
+			}
+            body{
+				background-color:#f2f2f2;
+			}
+			div{
+				background-color:white;
+			}
+		</style>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+	</head>
+	<body>
+
+        <!--{% csrf_token %}-->
+        <!--{{ form.as_p }}-->
+        <div style="border:solid;border-width:1px;position:absolute;left:30%;top:15%;diplay:inline-block;">
+		<form method="POST" style="border:solid;border-width:3px;padding:20px;display:inline-block;text-align: center;">
+			<h1>Volunteer Registration</h1>
+			{% csrf_token %}
+            <input type="text" name="PersonID" placeholder="Person ID" size="30" required><br>
+			<input type="text" name="district" size="30" placeholder="District" required><br>
+            <input type="text" name="organisation" placeholder="Organisation" size="30" required><br>
+            <select name="area_of_volunteering">
+                <option value="dcr">Doctor</option>
+                <option value="elw">Electrical Works</option>
+                <option value="vls">Vehicle Support</option>
+                <option value="rlo">Relief Operation</option>
+                <option value="cln">Cleaning</option>
+                <option value="bot">Boat Service</option>
+                <option value="oth">Other</option>
+            </select><br>
+			<p style="color:red;font-size:13px;">** If you dont have PersonId then download
+				<br>the app and regeister to get one</p>
+			<input type="submit" value="Submit" width=30/>
+		</form>
+		</div>
+	</body>
+</html>
+
+

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+  		<meta charset="utf-8">
+		<style>
+			input,textarea{
+				margin:5px;
+			}
+		</style>
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+		
+	</head>
+	<body>
+		<form style="border:solid;border-width:3px;padding:20px;display:inline-block;text-align: center;">
+			<input type="text" name="" placeholder="Name" size="30"/><br>
+			<input type="text" name="" size="30"><br>
+			<input id="address" type="text" name="" size="30" placeholder="Village/City"><br>
+			<input id="lat" type="text" name="long" size="30" placeholder="Latitude"><br>
+			<input id="long" type="text" name="lat" size="30" placeholder="Longitude"><br>
+			<input type="submit" value="Submit" width=30/>
+		</form>
+		<div id="th"></div>
+		<script>
+			$( "#address" ).focusout(function() {
+			  var uri="http://dev.virtualearth.net/REST/v1/Locations/";
+			  uri=uri+$( this ).val();
+			  uri=uri+"?o=json&key=Ak1Niz5T-7wp9lrVRb1kGtNm46vCML3OAkAiAL_7mPQWFe2N253Jw5E5lDl2y0kK";
+			  $.ajax({
+			  	url:uri,
+			  	success: function(result){
+					console.log(result);
+					var coordinates=result['resourceSets'][0]['resources'][0]['point']['coordinates'];
+					$("#lat").val(coordinates[0]);
+					$("#long").val(coordinates[1]);
+				       },
+				error:function(){
+					console.log("faild");
+				    }
+			  });
+			});
+			
+		</script>
+	</body>
+</html>

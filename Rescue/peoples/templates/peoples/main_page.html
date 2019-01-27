@@ -1,0 +1,109 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rescuer</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+
+        .link{
+
+            height:200px;
+            width:200px;
+            border:solid;
+            border-width:3px;
+            display:inline-block;
+            text-align: center;
+            background-color:white;
+            margin:20px;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
+        .link:hover{
+            background-color:#262626;
+            color:white;
+        }
+        body{
+            background-color:#f2f2f2;
+        }
+        a{
+            text-decoration:none;
+        }
+        .aw-six-hours-inner,.aw-more-block{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+	<div style=" margin:5px;padding:10px;">
+        <a href="{% url 'home:home1'%}"><img src="{% static "img/ekraftlogo.png" %}" style="height:130px;display:inline-block;" alt="logo" /></a>
+
+</div>
+
+    <div style="display:inline-block; width:80%;margin-left:10%;">
+        <a href="{% url 'peoples:add_shelter' %}" >
+        <div  class="link">
+                <br><br><br>
+
+                <i class="fa fa-hospital" style="font-size:80px;" ></i><br><br>
+               Add Shelter<br>
+            </div>
+    </a>
+    <a href="{% url 'peoples:all_shelters' %}" >
+        <div  class="link">
+                <br><br><br>
+                <i class="fa fa-building" style="font-size:80px;" ></i><br><br>
+               All Shelters<br>
+            </div>
+    </a>
+        <a href="{% url 'peoples:search_missing_person'%}">
+        <div class="link">
+            <br><br><br>
+            <i class="fa fa-user-secret" style="font-size:80px;"></i><br><br>
+            Search Missing Person<br>
+        </div>
+    </a>
+    <a href="{% url 'peoples:missing_person_request' %}" >
+        <div  class="link">
+                <br><br><br>
+
+                <i class="fas fa-address-book" style="font-size:80px;" ></i><br><br>
+               Missing Person Request<br>
+            </div>
+    </a>
+    <a href="{% url 'peoples:make_request' %}" style="margin-left:130px;" >
+        <div  class="link">
+                <br><br><br>
+                <i class="fas fa-seedling" style="font-size:80px;" ></i><br><br>
+               Make Requests<br>
+            </div>
+    </a>
+    <a href="{% url 'peoples:all_request' %}" >
+        <div  class="link">
+                <br><br><br>
+                <i class="glyphicon glyphicon-list-alt" style="font-size:80px;"></i>
+                <br><br>
+               All Requests<br>
+            </div>
+    </a>
+    <a href="{% url 'peoples:volunteering' %}" >
+        <div  class="link">
+                <br><br><br>
+
+                <i class="fas fa-hands" style="font-size:80px;" ></i><br><br>
+               Volunteering<br>
+            </div>
+    </a>
+
+    </div>
+
+</body>
+</html>
+
+
+

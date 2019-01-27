@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <!-- Reference to the Bing Maps SDK -->
+    <script type='text/javascript'
+            src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap'
+            async defer></script>
+
+    <script type='text/javascript'>
+        function random_position() {
+        return Math.random()*40;
+    }
+    function GetMap()
+    {
+        var map = new Microsoft.Maps.Map('#myMap',{
+            credentials: 'Ak1Niz5T-7wp9lrVRb1kGtNm46vCML3OAkAiAL_7mPQWFe2N253Jw5E5lDl2y0kK',
+
+        });
+        var locs=[];
+        var maxLat=-10000;
+        var maxLong=-10000;
+        var minLat=10000;
+        var minLong=10000;
+        {% for location in locations %}
+            var curr_lat= {{location.0}};
+            var curr_long={{location.1}};
+            var loc=new Microsoft.Maps.Location(curr_lat,curr_long);
+            var pin = createFontPushpin(loc, '\uf015', 'FontAwesome', 20, 'red',"dshj","asdnbd");
+            map.entities.push(pin);
+            if(curr_lat+1>maxLat){
+                maxLat=curr_lat+2;
+            }
+            if(curr_long+1>maxLong){
+                maxLong=curr_long+2;
+            }
+            if(curr_long-1<minLong){
+                minLong=curr_long-2;
+            }
+            if(curr_lat-1<minLat){
+                minLat=curr_lat-2;
+            }
+        {% endfor %}
+
+
+        var box=new Microsoft.Maps.LocationRect.fromEdges(maxLat,minLong,minLat,maxLong);
+        //var center=new Microsoft.Maps.Location((maxLat+minLat)/2,(maxLong+minLong)/2);
+        //map.setView({center: center,zoom: Math.min(10, map.getZoom({ bounds: box, padding: 80 })) });
+        map.setView({ bounds: box, padding: 80,});
+    }
+    function createFontPushpin(location, text, fontName, fontSizePx, color, name, place) {
+        var c = document.createElement('canvas');
+        var ctx = c.getContext('2d');
+
+        //Define font style
+        var font = fontSizePx + 'px ' + fontName;
+        ctx.font = font
+
+        //Resize canvas based on sie of text.
+        var size = ctx.measureText(text);
+        c.width = size.width;
+        c.height = fontSizePx;
+
+        //Reset font as it will be cleared by the resize.
+        ctx.font = font;
+        ctx.textBaseline = 'top';
+        ctx.fillStyle = color;
+
+        ctx.fillText(text, 0, 0);
+
+        return new Microsoft.Maps.Pushpin(location, {
+            title: name,
+            subTitle: place,
+            icon: c.toDataURL(),
+            anchor: new Microsoft.Maps.Point(c.width / 2, c.height / 2) //Align center of pushpin with location.
+        });
+    }
+
+    </script>
+    <script>
+        $(document).ready(function(){
+           $("#myMap").css("height", String(screen.height*0.7));
+        });
+    </script>
+</head>
+<body>
+<h3>Location of shelters</h3>
+    <div id="text"></div>
+    <div id="myMap" style="position:relative;width:80%;height:820px;border:solid;border-width:2px;margin:0 auto;"></div>
+</body>
+</html>
+
+
